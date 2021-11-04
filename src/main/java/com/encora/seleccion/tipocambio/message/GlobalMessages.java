@@ -27,6 +27,10 @@ public class GlobalMessages {
         return accessor.getMessage("msg.proceso.exitoso");
     }
 
+    public String msgListadoExitoso() {
+        return accessor.getMessage("msg.listado.exitoso");
+    }
+
     public String msgRegistroNoEncontrado(String valor) {
         return accessor.getMessage("msg.regitro.no.encontrado", new Object[]{valor});
     }

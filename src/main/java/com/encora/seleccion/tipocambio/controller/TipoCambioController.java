@@ -55,4 +55,15 @@ public class TipoCambioController {
         log.info("Fin de actualizarValorTipoCambio {}", response.getMensaje());
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+    @ApiOperation(
+            value = "Listar tipo de cambio.",
+            notes = "Este método se encarga de listar los tipos de cambio.")
+    @GetMapping
+    public ResponseEntity<GenericoResponse> listarTodos() {
+        log.info("Inicio de listarTodos");
+        GenericoResponse response = tipoCambioService.listarTodos();
+        log.info("Fin de listarTodos {}", response.getMensaje());
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }

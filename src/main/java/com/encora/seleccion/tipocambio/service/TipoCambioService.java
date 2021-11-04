@@ -6,6 +6,8 @@ import com.encora.seleccion.tipocambio.response.GenericoResponse;
 
 public interface TipoCambioService {
 
+    GenericoResponse listarTodos();
+
     GenericoResponse obtenerMontoTipoCambio(ObtenerMontoTipoCambioRequest request) throws Exception;
 
     GenericoResponse actualizarValorTipoCambio(Integer idTipoCambio, CambiarTipoCambioRequest request) throws Exception;

@@ -29,6 +29,11 @@ public class TipoCambioServiceImpl extends ReusableValidacion implements TipoCam
     }
 
     @Override
+    public GenericoResponse listarTodos() {
+        return procesarRespuesta(tipoCambioRepository.findAll(), globalMessages.msgListadoExitoso());
+    }
+
+    @Override
     public GenericoResponse obtenerMontoTipoCambio(ObtenerMontoTipoCambioRequest request) throws Exception {
 
         TipoCambio tipoCambioOrigen = tipoCambioRepository.findByAbreviatura(request.getMonedaOrigen());
